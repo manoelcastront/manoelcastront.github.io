@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!-- Documento HTML5 -->
+<html lang="pt-BR">
+  <head>
+    <!-- metadados básicos -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- responsividade em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manoel Castro | Portfólio</title>
+    <meta
+      name="description"
+      content="Portfólio de Manoel Castro – Business Intelligence e Análise de Dados."
+    />
+    <!-- folhas de estilo externas -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- navegação desktop -->
+    <nav id="desktop-nav">
+      <div class="logo">Manoel Castro</div>
+      <div>
+        <ul class="nav-links">
+          <!-- links para seções internas -->
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#publications">Publicações</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- navegação mobile (hambúrguer) -->
+    <nav id="hamburger-nav">
+      <div class="logo">Manoel Castro</div>
+      <div class="hamburger-menu">
+        <!-- ícone de menu; idealmente deveria ter role/button para acessibilidade -->
+        <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- links do menu colapsado; corrigido para semântica com <ul> -->
+        <ul class="menu-links">
+          <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projetos</a></li>
+          <li>
+            <a href="#publications" onclick="toggleMenu()">Publicações</a>
+          </li>
+          <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- seção Home / perfil -->
+    <section id="home">
+      <div class="section__pic-container">
+        <!-- foto de perfil -->
+        <img
+          src="./assets/profile-pic.png"
+          alt="Foto de perfil de Manoel Castro"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Olá, eu sou o</p>
+        <h1 class="title">Manoel Castro</h1>
+        <p class="section__text__p2">
+          Business Intelligence | Analista de Dados
+        </p>
+        <div class="btn-container">
+          <!-- botão para baixar currículo -->
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Currículo
+          </button>
+          <!-- navega para contato -->
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contato
+          </button>
+        </div>
+        <div id="socials-container">
+          <!-- ícones sociais com redirecionamento -->
+          <img
+            src="./assets/linkedin.png"
+            alt="Perfil do LinkedIn"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/manoelcastront/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="Perfil do GitHub"
+            class="icon"
+            onclick="location.href='https://github.com/manoelcastront/'"
+          />
+          <img
+            src="./assets/medium.png"
+            alt="Perfil do Medium"
+            class="icon"
+            onclick="location.href='https://medium.com/@manoelcastront/'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- seção Sobre -->
+    <section id="about">
+      <!-- pequeno rótulo -->
+      <p class="section__text__p1">Saiba mais</p>
+      <h1 class="title">Sobre mim</h1>
+
+      <div class="section-container">
+        <!-- detalhes -->
+        <div class="about-details-container">
+          <div class="about-containers">
+            <!-- Áreas de atuação -->
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Ícone de atuação"
+                class="icon"
+              />
+              <h3>Áreas de atuação</h3>
+              <p>
+                Análise exploratória de dados<br />
+                Visualização e storytelling<br />
+                Análise estatística aplicada<br />
+                Apoio à decisão com KPIs
+              </p>
+            </div>
+
+            <!-- Principais ferramentas -->
+            <div class="details-container">
+              <img
+                src="./assets/tool.png"
+                alt="Ícone de ferramentas"
+                class="icon"
+              />
+              <h3>Principais ferramentas</h3>
+              <p>
+                SQL, PostgreSQL<br />
+                Power BI, Excel avançado<br />
+                Python (Pandas, Seaborn, Geopandas)
+              </p>
+            </div>
+
+            <!-- Educação -->
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Ícone de educação"
+                class="icon"
+              />
+              <h3>Educação</h3>
+              <p>Bacharelado em Administração — UnB</p>
+            </div>
+          </div>
+
+          <!-- texto de apresentação mais longo -->
+          <div class="text-container">
+            <p>
+              Sou analista de dados com foco em Business Intelligence. Trabalho
+              com coleta, limpeza e visualização de dados para transformar
+              métricas em insights acionáveis. Tenho experiência na construção
+              de dashboards, definição de KPIs e suporte à tomada de decisão
+              baseada em evidência.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- navegação para próxima seção -->
+      <img
+        src="./assets/arrow.png"
+        alt="Ícone de seta"
+        class="icon arrow"
+        onclick="location.href='#projects'"
+      />
+    </section>
+
+    <!-- seção Projetos -->
+    <section id="projects">
+      <p class="section__text__p1">Veja meus</p>
+      <h1 class="title">Projetos</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- Projeto 1: card inteiro clicável -->
+          <div
+            class="details-container color-container project-card"
+            role="link"
+            tabindex="0"
+            aria-label="Projeto Análise de Fraude — ver no GitHub"
+            onclick="window.open('https://github.com/manoel-nto/analise_fraude.git', '_blank')"
+            onkeydown="if(event.key === 'Enter') window.open('https://github.com/manoel-nto/analise_fraude.git', '_blank')"
+          >
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Screenshot do projeto de análise de fraude"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Fraude em Transações
+            </h2>
+            <p class="project-desc">
+              <!-- Detecção de transações suspeitas com técnicas estatísticas,
+              visualizações e dashboards para tomada de decisão. -->
+              Exploração de dados de transações de e-commerce para identificar
+              padrões de fraude. Utilização de técnicas estatísticas e
+              visualizações para apoiar a tomada de decisão.
+            </p>
+          </div>
+
+          <!-- Projeto 2 -->
+          <div
+            class="details-container color-container project-card"
+            role="link"
+            tabindex="0"
+            aria-label="Projeto Dois — ver no GitHub"
+            onclick="window.open('https://github.com/manoel-nto/projeto-dois.git', '_blank')"
+            onkeydown="if(event.key === 'Enter') window.open('https://github.com/manoel-nto/projeto-dois.git', '_blank')"
+          >
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Screenshot do segundo projeto"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Análise Geoespacial</h2>
+            <p class="project-desc">
+              Análise de dados geográficos para identificar tendências e padrões
+              espaciais. Utilização de Python e bibliotecas como Geopandas para
+              visualização de dados geoespaciais.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- seta para próxima seção (Publicações) -->
+      <img
+        src="./assets/arrow.png"
+        alt="Ícone de seta"
+        class="icon arrow"
+        onclick="location.href='#publications'"
+      />
+    </section>
+
+    <!-- seção Publicações -->
+    <section id="publications">
+      <p class="section__text__p1">Minhas</p>
+      <h1 class="title">Publicações</h1>
+      <div class="section-container">
+        <!-- item de publicação 1 -->
+        <div class="details-container">
+          <h3>Artigo no Medium</h3>
+          <p class="publication-meta">Maio de 2025</p>
+          <p>
+            Resumo breve da publicação ou ideia central. Pode incluir link para
+            leitura completa.
+          </p>
+          <a href="#" class="read-more">Ler mais</a>
+        </div>
+        <!-- item de publicação 2 -->
+        <div class="details-container">
+          <h3>Post no LinkedIn</h3>
+          <p class="publication-meta">Março de 2025</p>
+          <p>Insight ou destaque de uma publicação profissional relevante.</p>
+          <a href="#" class="read-more">Ler mais</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- seção Contato -->
+    <section id="contact">
+      <p class="section__text__p1">Entre em contato</p>
+      <h1 class="title">Fale comigo</h1>
+      <div class="contact-info-upper-container">
+        <!-- email -->
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Ícone de email"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:manoelcastro.nt@gmail.com"
+              >manoelcastro.nt@gmail.com</a
+            >
+          </p>
+        </div>
+        <!-- LinkedIn -->
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="Ícone do LinkedIn"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/manoelcastront/">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- rodapé com navegação repetida -->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#publications">Publicações</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>&copy; 2025 Manoel Castro. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- script externo (menu, realce etc.) -->
+    <script src="script.js"></script>
+  </body>
+</html>

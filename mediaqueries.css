@@ -77,7 +77,7 @@
     gap: 2rem;
     flex-wrap: wrap; /* evita que quebre em novas linhas, a menos que a tela fique pequena */
     height: 64vh;
-    margin-bottom: 0;
+    margin-bottom: 3rem; /* ajuste o valor até ficar confortável */;
   }
 
   #contact,
